@@ -1,0 +1,25 @@
+<!-- <div class="abc">
+    <button (click)="getChildData()">Get Child Data</button>
+    Sum = {{Data}}
+</div>
+
+<button (click)="onClick()">Click Me</button>
+<div class="abc">
+    <app-child [parentData]="parentData"></app-child>
+</div> -->
+
+
+<div class="row">
+    <div class="col-md-6" id="row123">
+        This Is Parent Component
+        <button type="button" (click)="onClick()"> Click Me</button>
+        <p>{{parentData}}</p>
+
+
+        <p>Data From Child = {{Data}}</p>
+    </div>
+    <div class="col-md-6" id="row1">
+        This Is Child Component
+        <app-child [parentData]="parentData"  (childData)="getChildData($event)"></app-child>
+    </div>
+</div>
